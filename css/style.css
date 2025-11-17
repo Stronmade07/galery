@@ -41,12 +41,13 @@ header h2 {
     gap: 15px;
 }
 
-/* Galería: variante Mosaico / Masonry usando columnas CSS (sin JS) */
+/* Galería: variante Mosaico / Masonry usando columnas CSS */
 .gallery.masonry {
     margin-top: 20px;
-    column-gap: 15px;
-    /* Responsive columns */
-    column-count: 3;
+    column-gap: 10px;
+    /* Column-width más pequeña para miniaturas menos grandes */
+    -webkit-column-width: 150px;
+    column-width: 150px;
 }
 
 .gallery.masonry .gallery-item {
@@ -93,11 +94,12 @@ footer {
 
 /* Media queries para columns masonry */
 @media (max-width: 900px) {
-    .gallery.masonry { column-count: 2; }
+    .gallery.masonry { -webkit-column-width: 140px; column-width: 140px; column-gap: 10px; }
 }
 
 @media (max-width: 600px) {
-    .gallery.masonry { column-count: 1; }
+    .gallery.masonry { -webkit-column-width: 100%; column-width: 100%; column-gap: 8px; }
+    .gallery.masonry .gallery-item { margin-bottom: 12px; }
 }
 
 /* Variables y temas */
