@@ -30,7 +30,7 @@ header h2 {
 
 /* Clase alternativa para encabezados ligeramente más grandes */
 .small-header h2 {
-    font-size: 22px;
+    font-size: 100px;
 }
 
 /* Galería: variante Grid (layout en rejilla) */
